@@ -1,16 +1,10 @@
 pipeline {
   agent none
 
-  environment {
-    MAJOR_VERSION = 1
-  }
-
   stages {
-    stage('Say Hello') {
-      agent any
-
+    stage('build') {
       steps {
-        sayHello 'Awesome Student!'
+        ant -f build.xml -v
       }
     }
 }
