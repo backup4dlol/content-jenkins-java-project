@@ -37,7 +37,7 @@ pipeline {
       }
       steps {
         sh "wget http://192.168.56.112/rectangles/all/dlolrectangle.jar"
-        sh "java -jar dlolrectangle.jar" 3 4"
+        sh "java -jar dlolrectangle.jar 3 4"
       }
     }
     stage("Test on Debian") {
@@ -46,7 +46,7 @@ pipeline {
       }
       steps {
         sh "wget http://192.168.56.112/rectangles/all/dlolrectangle.jar"
-        sh "java -jar dlolrectangle.jar" 3 4"
+        sh "java -jar dlolrectangle.jar 3 4"
       }
 }
   }
