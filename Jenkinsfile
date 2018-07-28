@@ -53,6 +53,9 @@ pipeline {
             agent {
              label 'slave'
                 }
+      when {
+        branch 'functional'
+      }
      steps {
       sh "cp /var/www/html/rectangles/all/dlolrectangle.jar /var/www/html/rectangles/green/dlolrectangle.jar"
        }
