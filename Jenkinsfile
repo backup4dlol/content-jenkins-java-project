@@ -49,7 +49,10 @@ pipeline {
         sh "java -jar dlolrectangle.jar 3 4"
       }
      }
-    stage('Promote to Green') {      
+    stage('Promote to Green') {  
+            agent {
+             label 'slave'
+                }
      steps {
       sh "cp /var/www/html/rectangles/all/dlolrectangle.jar /var/www/html/rectangles/green/dlolrectangle.jar"
        }
