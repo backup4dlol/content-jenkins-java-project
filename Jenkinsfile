@@ -48,6 +48,11 @@ pipeline {
         sh "wget http://192.168.56.112/rectangles/all/dlolrectangle.jar"
         sh "java -jar dlolrectangle.jar 3 4"
       }
-}
-  }
+     }
+    stage('Promote to Green') {      
+     steps {
+      sh "cp /var/www/html/rectangles/all/dlolrectangle.jar /var/www/html/rectangles/green/dlolrectangle.jar
+       }
+      }
+     }
 }
